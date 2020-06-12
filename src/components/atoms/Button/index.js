@@ -1,8 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {colors, fonts} from '../../../utils';
+import IconOnly from './IconOnly';
 
-const Button = ({type, title, onPress}) => {
+const Button = ({type, title, onPress, icon}) => {
+  if (type === 'icon-only') {
+    return <IconOnly icon={icon} onPress={onPress} />;
+  }
   return (
     <TouchableOpacity style={styles.container(type)} onPress={onPress}>
       <Text style={styles.text(type)}>{title}</Text>
@@ -14,7 +19,10 @@ export default Button;
 
 const styles = StyleSheet.create({
   container: type => ({
-    backgroundColor: type === 'secondary' ? 'white' : '#0BCAD4',
+    backgroundColor:
+      type === 'secondary'
+        ? colors.button.secondary.background
+        : colors.button.primary.background,
     // warna aslab #27467D
     // warna primary default #0BCAD4
     paddingVertical: 10,
@@ -23,8 +31,11 @@ const styles = StyleSheet.create({
   text: type => ({
     fontSize: 18,
     fontWeight: '600',
-    fontFamily: 'Nunito-SemiBold',
+    fontFamily: fonts.primary[600],
     textAlign: 'center',
-    color: type === 'secondary' ? '#112340' : 'white',
+    color:
+      type === 'secondary'
+        ? colors.button.secondary.text
+        : colors.button.primary.text,
   }),
 });
