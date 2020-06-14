@@ -28,7 +28,8 @@ const TabItem = ({title, active, onPress, onLongPress}) => {
     <TouchableOpacity
       style={styles.container}
       onPress={onPress}
-      onLongPress={onLongPress}>
+      onLongPress={onLongPress}
+      hitSlop={{top: 20, bottom: 20, left: 50, right: 40}}>
       <Icon />
       <Text style={styles.text(active)}>{title}</Text>
     </TouchableOpacity>

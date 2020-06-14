@@ -40,8 +40,8 @@ const Doctor = () => {
             <RatedDoctor />
             <RatedDoctor />
             <RatedDoctor />
+            <Text style={styles.sectionLabel}>Good News</Text>
           </View>
-          <Text style={styles.sectionLabel}>Good News</Text>
           <NewsItem />
           <NewsItem />
           <NewsItem />
