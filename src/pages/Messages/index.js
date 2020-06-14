@@ -1,7 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {ListMessages} from '../../components';
-import {color} from 'react-native-reanimated';
 import {colors, fonts} from '../../utils';
 
 const Messages = () => {

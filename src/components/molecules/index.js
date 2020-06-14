@@ -1,19 +1,19 @@
 import Header from './Header';
 import BottomNavigator from './BottomNavigator';
 import HomeProfile from './HomeProfile';
-import DoctorCategory from './DoctorCategory';
-import RatedDoctor from './RatedDoctor';
+import InformationCategory from './InformationCategory';
+import BestLaboratory from './BestLaboratory';
 import NewsItem from './NewsItem';
 import ListMessages from './ListMessages';
-import ListHospitals from './ListHospitals';
+import ListMembers from './ListMembers';
 
 export {
   Header,
   BottomNavigator,
   HomeProfile,
-  DoctorCategory,
-  RatedDoctor,
+  InformationCategory,
+  BestLaboratory,
   NewsItem,
   ListMessages,
-  ListHospitals,
+  ListMembers,
 };

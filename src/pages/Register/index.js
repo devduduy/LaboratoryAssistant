@@ -1,20 +1,26 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {Button, Gap, Header, Input} from '../../components';
-import {colors} from '../../utils';
+import {colors, fonts} from '../../utils';
+import {ILLogo} from '../../assets';
 
 const Register = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header onPress={() => navigation.goBack()} title="Register" />
       <View style={styles.content}>
-        <Input label="Full Name" />
+        <View style={styles.wrapperTitle}>
+          <ILLogo style={styles.image} />
+          <Text style={styles.title}>Lets Start Joining ! </Text>
+        </View>
+        <Gap height={20} />
+        <Input label="Full Name" placeholder="Your full name here.." />
         <Gap height={24} />
-        <Input label="Pekerjaan" />
+        <Input label="Major" placeholder="Your major here.." />
         <Gap height={24} />
-        <Input label="Email" />
+        <Input label="Email" placeholder="Your email .." />
         <Gap height={24} />
-        <Input label="Password" />
+        <Input label="Password" placeholder="Your password .." />
         <Gap height={40} />
         <Button
           title="Continue"
@@ -31,6 +37,18 @@ const styles = StyleSheet.create({
   page: {
     backgroundColor: colors.white,
     flex: 1,
+  },
+  wrapperTitle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  image: {
+    marginRight: 20,
+  },
+  title: {
+    fontSize: 20,
+    fontFamily: fonts.primary[600],
+    color: colors.text.primary,
   },
   content: {
     padding: 40,

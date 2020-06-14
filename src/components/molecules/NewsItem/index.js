@@ -8,7 +8,8 @@ const NewsItem = () => {
     <View style={styles.container}>
       <View style={styles.contentArticle}>
         <Text style={styles.title}>
-          Is it safe to stay at home during coronavirus?
+          2 laboratory assistant members won 1st place in the coding competitive
+          competition
         </Text>
         <Text style={styles.date}>Today</Text>
       </View>

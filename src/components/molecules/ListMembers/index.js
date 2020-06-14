@@ -1,21 +1,21 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
-import {DummyHospital1} from '../../../assets';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {colors, fonts} from '../../../utils';
 
-const ListHospitals = () => {
+const ListMembers = ({picture, name, major, generation}) => {
   return (
     <View style={styles.container}>
-      <Image source={DummyHospital1} style={styles.picture} />
+      <Image source={picture} style={styles.picture} />
       <View>
-        <Text style={styles.name}>Rumah Sakit Cipto Mangunkusumo</Text>
-        <Text style={styles.address}>Jl.Dipenogoro, Jakarta Pusat</Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.major}>{major}</Text>
+        <Text style={styles.generation}>{generation}</Text>
       </View>
     </View>
   );
 };
 
-export default ListHospitals;
+export default ListMembers;
 
 const styles = StyleSheet.create({
   container: {
@@ -35,10 +35,15 @@ const styles = StyleSheet.create({
     fontFamily: fonts.primary.normal,
     color: colors.text.primary,
   },
-  address: {
+  major: {
     fontSize: 12,
     fontFamily: fonts.primary[300],
     color: colors.text.secondary,
-    marginTop: 6,
+    marginTop: 3,
+  },
+  generation: {
+    fontSize: 12,
+    fontFamily: fonts.primary[300],
+    color: colors.text.secondary,
   },
 });

@@ -2,10 +2,10 @@ import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {
-  IconDoctor,
-  IconDoctorActive,
-  IconHospitals,
-  IconHospitalsActive,
+  IconHome,
+  IconHomeActive,
+  IconMembers,
+  IconMembersActive,
   IconMessages,
   IconMessagesActive,
 } from '../../../assets';
@@ -13,16 +13,16 @@ import {colors, fonts} from '../../../utils';
 
 const TabItem = ({title, active, onPress, onLongPress}) => {
   const Icon = () => {
-    if (title === 'Doctor') {
-      return active ? <IconDoctorActive /> : <IconDoctor />;
+    if (title === 'Home') {
+      return active ? <IconHomeActive /> : <IconHome />;
     }
     if (title === 'Messages') {
       return active ? <IconMessagesActive /> : <IconMessages />;
     }
-    if (title === 'Hospitals') {
-      return active ? <IconHospitalsActive /> : <IconHospitals />;
+    if (title === 'Members') {
+      return active ? <IconMembersActive /> : <IconMembers />;
     }
-    return <IconDoctor />;
+    return <IconHome />;
   };
   return (
     <TouchableOpacity

@@ -10,9 +10,9 @@ const Login = ({navigation}) => {
     <View style={styles.page}>
       <ILLogo />
       <Text style={styles.title}>Sign In and Start Asking Questions </Text>
-      <Input label="Email Address" />
+      <Input label="Email Address" placeholder="Please enter email .." />
       <Gap height={24} />
-      <Input label="Password" />
+      <Input label="Password" placeholder="Please enter password .." />
       <Gap height={10} />
       <Link title="Forgot My Password" size={12} />
       <Gap height={40} />

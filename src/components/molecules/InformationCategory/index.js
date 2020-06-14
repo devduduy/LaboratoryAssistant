@@ -3,17 +3,17 @@ import {StyleSheet, Text, View} from 'react-native';
 import {ILDocUmum} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const DoctorCategory = () => {
+const HomeCategory = () => {
   return (
     <View style={styles.container}>
       <ILDocUmum style={styles.ilustration} />
-      <Text style={styles.label}>I need</Text>
-      <Text style={styles.category}>general doctors</Text>
+      <Text style={styles.label}>Head of Laboratory</Text>
+      <Text style={styles.category}>Ifan Prihandi</Text>
     </View>
   );
 };
 
-export default DoctorCategory;
+export default HomeCategory;
 
 const styles = StyleSheet.create({
   container: {
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 10,
     width: 110,
-    height: 130,
+    height: 150,
   },
   ilustration: {
     marginBottom: 28,

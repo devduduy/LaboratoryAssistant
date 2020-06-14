@@ -1,15 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import {
-  DoctorCategory,
+  InformationCategory,
   HomeProfile,
   NewsItem,
-  RatedDoctor,
+  BestLaboratory,
   Gap,
 } from '../../components';
 import {fonts, colors} from '../../utils';
 
-const Doctor = () => {
+const Home = () => {
   return (
     <View style={styles.page}>
       <View style={styles.content}>
@@ -18,28 +18,30 @@ const Doctor = () => {
             <Gap height={30} />
             <HomeProfile />
             <Text style={styles.welcome}>
-              Who do you want to consult with today?
+              Who do you want to get an information?
             </Text>
           </View>
           <View style={styles.wrapperScroll}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.category}>
                 <Gap width={32} />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
-                <DoctorCategory />
+                <InformationCategory />
+                <InformationCategory />
+                <InformationCategory />
+                <InformationCategory />
+                <InformationCategory />
+                <InformationCategory />
                 <Gap width={22} />
               </View>
             </ScrollView>
           </View>
           <View style={styles.wrapperSection}>
-            <Text style={styles.sectionLabel}>Top Rated Doctors</Text>
-            <RatedDoctor />
-            <RatedDoctor />
-            <RatedDoctor />
+            <Text style={styles.sectionLabel}>
+              Best of Laboratory Assistant
+            </Text>
+            <BestLaboratory />
+            <BestLaboratory />
+            <BestLaboratory />
             <Text style={styles.sectionLabel}>Good News</Text>
           </View>
           <NewsItem />
@@ -52,7 +54,7 @@ const Doctor = () => {
   );
 };
 
-export default Doctor;
+export default Home;
 
 const styles = StyleSheet.create({
   page: {

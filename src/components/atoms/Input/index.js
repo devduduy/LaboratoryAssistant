@@ -3,11 +3,11 @@ import {StyleSheet, Text, View} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import {colors, fonts} from '../../../utils';
 
-const Input = ({label}) => {
+const Input = ({label, placeholder}) => {
   return (
     <View>
       <Text style={styles.label}>{label}</Text>
-      <TextInput style={styles.input} />
+      <TextInput style={styles.input} placeholder={placeholder} />
     </View>
   );
 };
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
     borderRadius: 10,
-    padding: 12,
+    padding: 8,
   },
   label: {
     fontSize: 16,

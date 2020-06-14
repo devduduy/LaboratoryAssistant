@@ -3,9 +3,9 @@ import GetStarted from './GetStarted';
 import Register from './Register';
 import Login from './Login';
 import UploadPhoto from './UploadPhoto';
-import Doctor from './Doctor';
+import Home from './Home';
 import Messages from './Messages';
-import Hospitals from './Hospitals';
+import Members from './Members';
 
 export {
   Splash,
@@ -13,7 +13,7 @@ export {
   Register,
   Login,
   UploadPhoto,
-  Doctor,
+  Home,
   Messages,
-  Hospitals,
+  Members,
 };

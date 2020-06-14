@@ -1,15 +1,15 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
-import {DummyDoctor1, IconStar} from '../../../assets';
+import {DummyBestLaboratory1, IconStar} from '../../../assets';
 import {fonts, colors} from '../../../utils';
 
-const RatedDoctor = () => {
+const BestLaboratory = () => {
   return (
     <View style={styles.container}>
-      <Image source={DummyDoctor1} style={styles.avatar} />
+      <Image source={DummyBestLaboratory1} style={styles.avatar} />
       <View style={styles.profile}>
-        <Text style={styles.name}>Fildzah Gita</Text>
-        <Text style={styles.profession}>Dentist</Text>
+        <Text style={styles.name}>Jessica Sabrina</Text>
+        <Text style={styles.profession}>Sistem Informasi</Text>
       </View>
       <View style={styles.star}>
         <IconStar />
@@ -22,7 +22,7 @@ const RatedDoctor = () => {
   );
 };
 
-export default RatedDoctor;
+export default BestLaboratory;
 
 const styles = StyleSheet.create({
   container: {
