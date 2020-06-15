@@ -11,6 +11,12 @@ import {
   DummyMembers1,
   DummyMembers2,
   DummyMembers3,
+  DummyMembers4,
+  DummyMembers5,
+  DummyMembers6,
+  DummyMembers7,
+  DummyMembers8,
+  DummyMembers9,
 } from '../../assets/dummy';
 import {fonts, colors} from '../../utils';
 import {ListMembers, Gap} from '../../components';
@@ -29,49 +35,49 @@ const Members = () => {
             name="Yudha Permana"
             major="Teknik Informatika"
             generation="2016"
-            picture={DummyMembers1}
+            picture={DummyMembers3}
           />
           <ListMembers
             name="Muhammad Raisah"
             major="Teknik Informatika"
             generation="2016"
-            picture={DummyMembers2}
+            picture={DummyMembers6}
           />
           <ListMembers
             name="Muhammad Ammar Fakhri"
             major="Teknik Informatika"
             generation="2016"
-            picture={DummyMembers1}
+            picture={DummyMembers9}
           />
           <ListMembers
             name="Imam Nududdin"
             major="Teknik Informatika"
             generation="2016"
-            picture={DummyMembers2}
+            picture={DummyMembers3}
           />
           <ListMembers
             name="Amat Deska Arya"
             major="Teknik Informatika"
             generation="2016"
-            picture={DummyMembers2}
+            picture={DummyMembers6}
           />
           <ListMembers
             name="M. Fadhil Rachman"
             major="Teknik Informatika"
             generation="2016"
-            picture={DummyMembers1}
+            picture={DummyMembers9}
           />
           <ListMembers
             name="Jessica"
             major="Teknik Informatika"
             generation="2016"
-            picture={DummyMembers3}
+            picture={DummyMembers1}
           />
           <ListMembers
             name="Michael Surompo"
             major="Sistem Informasi"
             generation="2016"
-            picture={DummyMembers2}
+            picture={DummyMembers6}
           />
           <ListMembers
             name="Jody Heryanto"
@@ -83,25 +89,25 @@ const Members = () => {
             name="Rusmanda"
             major="Teknik Informatika"
             generation="2017"
-            picture={DummyMembers1}
+            picture={DummyMembers9}
           />
           <ListMembers
             name="Aldy Rachman"
             major="Teknik Informatika"
             generation="2018"
-            picture={DummyMembers2}
+            picture={DummyMembers3}
           />
           <ListMembers
             name="Miskah Alfiyyah K"
             major="Sistem Informasi"
             generation="2018"
-            picture={DummyMembers3}
+            picture={DummyMembers2}
           />
           <ListMembers
             name="Aldino Putra Siregar"
             major="Sistem Informasi"
             generation="2018"
-            picture={DummyMembers1}
+            picture={DummyMembers6}
           />
           <ListMembers
             name="Devi Permata Sari"

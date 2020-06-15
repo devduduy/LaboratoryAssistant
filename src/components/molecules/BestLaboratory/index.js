@@ -1,15 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
-import {DummyBestLaboratory1, IconStar} from '../../../assets';
-import {fonts, colors} from '../../../utils';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import {IconStar} from '../../../assets';
+import {colors, fonts} from '../../../utils';
 
-const BestLaboratory = () => {
+const BestLaboratory = ({profile, name, major}) => {
   return (
     <View style={styles.container}>
-      <Image source={DummyBestLaboratory1} style={styles.avatar} />
+      <Image source={profile} style={styles.avatar} />
       <View style={styles.profile}>
-        <Text style={styles.name}>Jessica Sabrina</Text>
-        <Text style={styles.profession}>Sistem Informasi</Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.profession}>{major}</Text>
       </View>
       <View style={styles.star}>
         <IconStar />
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     marginRight: 12,
+    borderRadius: 25,
   },
   profile: {
     flex: 1,

@@ -1,0 +1,31 @@
+{
+  "data": {
+    "informationCategory": [
+      {
+        "id": 1,
+        "profession": "Head of Laboratory",
+        "name": "Ifan Prihandi"
+      },
+      {
+        "id": 2,
+        "profession": "Laboran",
+        "name": "Ridho"
+      },
+      {
+        "id": 3,
+        "profession": "Head of Laboratory Assistant",
+        "name": "Imam Nududdin"
+      },
+      {
+        "id": 4,
+        "profession": "Head of Programming",
+        "name": "Yudha Permana"
+      },
+      {
+        "id": 5,
+        "profession": "Head of Networking",
+        "name": "Muhammad Raisah"
+      }
+    ]
+  }
+}

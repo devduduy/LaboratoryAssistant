@@ -9,6 +9,12 @@ import DummyMembersBg from './Members-bg.png';
 import DummyMembers1 from './Members-1.png';
 import DummyMembers2 from './Members-2.png';
 import DummyMembers3 from './Members-3.png';
+import DummyMembers4 from './Members-4.png';
+import DummyMembers5 from './Members-5.png';
+import DummyMembers6 from './Members-6.png';
+import DummyMembers7 from './Members-7.png';
+import DummyMembers8 from './Members-8.png';
+import DummyMembers9 from './Members-9.png';
 
 export {
   DummyUser,
@@ -22,4 +28,10 @@ export {
   DummyMembers1,
   DummyMembers2,
   DummyMembers3,
+  DummyMembers4,
+  DummyMembers5,
+  DummyMembers6,
+  DummyMembers7,
+  DummyMembers8,
+  DummyMembers9,
 };

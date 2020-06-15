@@ -1,13 +1,22 @@
 import React from 'react';
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {
-  InformationCategory,
-  HomeProfile,
-  NewsItem,
+  DummyMembers3,
+  DummyMembers6,
+  DummyMembers8,
+  DummyNews1,
+  DummyNews2,
+  DummyNews3,
+  JSONDummy,
+} from '../../assets';
+import {
   BestLaboratory,
   Gap,
+  HomeProfile,
+  InformationCategory,
+  NewsItem,
 } from '../../components';
-import {fonts, colors} from '../../utils';
+import {colors, fonts} from '../../utils';
 
 const Home = () => {
   return (
@@ -25,12 +34,15 @@ const Home = () => {
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.category}>
                 <Gap width={32} />
-                <InformationCategory />
-                <InformationCategory />
-                <InformationCategory />
-                <InformationCategory />
-                <InformationCategory />
-                <InformationCategory />
+                {JSONDummy.data.informationCategory.map(item => {
+                  return (
+                    <InformationCategory
+                      key={item.id}
+                      profession={item.profession}
+                      name={item.name}
+                    />
+                  );
+                })}
                 <Gap width={22} />
               </View>
             </ScrollView>
@@ -39,14 +51,44 @@ const Home = () => {
             <Text style={styles.sectionLabel}>
               Best of Laboratory Assistant
             </Text>
-            <BestLaboratory />
-            <BestLaboratory />
-            <BestLaboratory />
+            <BestLaboratory
+              profile={DummyMembers3}
+              name="Yudha Permana"
+              major="Teknik Informatika"
+            />
+            <BestLaboratory
+              profile={DummyMembers6}
+              name="Jody Heryanto"
+              major="Teknik Informatika"
+            />
+            <BestLaboratory
+              profile={DummyMembers8}
+              name="Devi Permata Sari"
+              major="Sistem Informasi"
+            />
             <Text style={styles.sectionLabel}>Good News</Text>
           </View>
-          <NewsItem />
-          <NewsItem />
-          <NewsItem />
+          <NewsItem
+            title="2 laboratory assistant members won 1st place in the coding competitive
+          competition"
+            date="Today"
+            picture={DummyNews1}
+          />
+          <NewsItem
+            title="An alumni of laboratory assistant enter the big startup company"
+            date="A month ago"
+            picture={DummyNews2}
+          />
+          <NewsItem
+            title="An laboratory assistant member success got a published journals"
+            date="Yesterday"
+            picture={DummyNews3}
+          />
+          <NewsItem
+            title="Team of laboratory assistant make a project for faculty system, it's E-surat & E-legalisir"
+            date="Today"
+            picture={DummyNews1}
+          />
           <Gap height={30} />
         </ScrollView>
       </View>

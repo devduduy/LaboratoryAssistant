@@ -1,15 +1,19 @@
 import ILLogo from './logo.svg';
 import ILGetStarted from './get-started.png';
 import ILNullPhoto from './user_photo_null.png';
-import ILDocUmum from './ic_doc_umum.svg';
-import ILDocPsikiater from './ic_doc_psikiater.svg';
-import ILDocObat from './ic_doc_obat.svg';
+import ILHeadOfLaboratory from './ic_information-1.svg';
+import ILLaboran from './ic_information-2.svg';
+import ILHeadOfLaboratoryAssistant from './ic_information-3.svg';
+import ILHeadOfProgramming from './ic_information-1.svg';
+import ILHeadOfNetworking from './ic_information-2.svg';
 
 export {
   ILLogo,
   ILGetStarted,
   ILNullPhoto,
-  ILDocUmum,
-  ILDocPsikiater,
-  ILDocObat,
+  ILHeadOfLaboratory,
+  ILLaboran,
+  ILHeadOfLaboratoryAssistant,
+  ILHeadOfNetworking,
+  ILHeadOfProgramming,
 };

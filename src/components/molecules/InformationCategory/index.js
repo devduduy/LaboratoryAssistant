@@ -1,19 +1,43 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {ILDocUmum} from '../../../assets';
+import {
+  ILHeadOfLaboratory,
+  ILLaboran,
+  ILHeadOfLaboratoryAssistant,
+  ILHeadOfProgramming,
+  ILHeadOfNetworking,
+} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const HomeCategory = () => {
+const InformationCategory = ({profession, name}) => {
+  const Icon = () => {
+    if (profession === 'Head of Laboratory') {
+      return <ILHeadOfLaboratory style={styles.ilustration} />;
+    }
+    if (profession === 'Laboran') {
+      return <ILLaboran style={styles.ilustration} />;
+    }
+    if (profession === 'Head of Laboratory Assistant') {
+      return <ILHeadOfLaboratoryAssistant style={styles.ilustration} />;
+    }
+    if (profession === 'Head of Programming') {
+      return <ILHeadOfProgramming style={styles.ilustration} />;
+    }
+    if (profession === 'Head of Networking') {
+      return <ILHeadOfNetworking style={styles.ilustration} />;
+    }
+    return <ILHeadOfLaboratory style={styles.ilustration} />;
+  };
   return (
     <View style={styles.container}>
-      <ILDocUmum style={styles.ilustration} />
-      <Text style={styles.label}>Head of Laboratory</Text>
-      <Text style={styles.category}>Ifan Prihandi</Text>
+      <Icon />
+      <Text style={styles.label}>{profession}</Text>
+      <Text style={styles.category}>{name}</Text>
     </View>
   );
 };
 
-export default HomeCategory;
+export default InformationCategory;
 
 const styles = StyleSheet.create({
   container: {
@@ -23,7 +47,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 10,
     width: 110,
-    height: 150,
+    height: 175,
   },
   ilustration: {
     marginBottom: 28,
