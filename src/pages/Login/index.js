@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 
 import {ILLogo} from '../../assets';
 import {Input, Link, Button, Gap} from '../../components';
@@ -7,7 +7,7 @@ import {colors, fonts} from '../../utils';
 
 const Login = ({navigation}) => {
   return (
-    <View style={styles.page}>
+    <ScrollView style={styles.page} showsVerticalScrollIndicator={false}>
       <ILLogo />
       <Text style={styles.title}>Sign In and Start Asking Questions </Text>
       <Input label="Email Address" placeholder="Please enter email .." />
@@ -18,8 +18,13 @@ const Login = ({navigation}) => {
       <Gap height={40} />
       <Button title="Sign In" onPress={() => navigation.replace('MainApp')} />
       <Gap height={30} />
-      <Link title="Create New Account" size={16} align="center" />
-    </View>
+      <Link
+        title="Create New Account"
+        size={16}
+        align="center"
+        onPress={() => navigation.navigate('Register')}
+      />
+    </ScrollView>
   );
 };
 

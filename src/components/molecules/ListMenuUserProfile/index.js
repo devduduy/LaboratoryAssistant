@@ -1,12 +1,33 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {colors, fonts} from '../../../utils';
-import {IconNext} from '../../../assets';
+import {
+  IconNext,
+  IconEditProfile,
+  IconLanguage,
+  IconGiveRate,
+  IconHelp,
+} from '../../../assets';
 
-const ListMessages = ({profile, name, desc, type, onPress}) => {
+const ListMenuUserProfile = ({profile, name, desc, type, onPress, icon}) => {
+  const Icon = () => {
+    if (icon === 'editProfile') {
+      return <IconEditProfile />;
+    }
+    if (icon === 'language') {
+      return <IconLanguage />;
+    }
+    if (icon === 'giveRate') {
+      return <IconGiveRate />;
+    }
+    if (icon === 'help') {
+      return <IconHelp />;
+    }
+    return <IconEditProfile />;
+  };
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={profile} style={styles.avatar} />
+      <Icon />
       <View style={styles.content}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.messages}>{desc}</Text>
@@ -16,7 +37,7 @@ const ListMessages = ({profile, name, desc, type, onPress}) => {
   );
 };
 
-export default ListMessages;
+export default ListMenuUserProfile;
 
 const styles = StyleSheet.create({
   container: {
@@ -29,12 +50,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-  },
-  avatar: {
-    width: 46,
-    height: 46,
-    marginRight: 12,
-    borderRadius: 23,
+    marginLeft: 16,
   },
   name: {
     fontSize: 16,

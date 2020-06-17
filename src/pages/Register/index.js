@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, ScrollView} from 'react-native';
 import {Button, Gap, Header, Input} from '../../components';
 import {colors, fonts} from '../../utils';
 import {ILLogo} from '../../assets';
 
 const Register = ({navigation}) => {
   return (
-    <View style={styles.page}>
+    <ScrollView style={styles.page} showsVerticalScrollIndicator={false}>
       <Header onPress={() => navigation.goBack()} title="Register" />
       <View style={styles.content}>
         <View style={styles.wrapperTitle}>
@@ -27,7 +27,7 @@ const Register = ({navigation}) => {
           onPress={() => navigation.navigate('UploadPhoto')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

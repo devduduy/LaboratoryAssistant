@@ -18,14 +18,14 @@ import {
 } from '../../components';
 import {colors, fonts} from '../../utils';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={styles.content}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.wrapperSection}>
             <Gap height={30} />
-            <HomeProfile />
+            <HomeProfile onPress={() => navigation.navigate('UserProfile')} />
             <Text style={styles.welcome}>
               Who do you want to get an information?
             </Text>
@@ -40,6 +40,7 @@ const Home = () => {
                       key={item.id}
                       profession={item.profession}
                       name={item.name}
+                      onPress={() => navigation.navigate('ChooseInformation')}
                     />
                   );
                 })}
@@ -55,16 +56,25 @@ const Home = () => {
               profile={DummyMembers3}
               name="Yudha Permana"
               major="Teknik Informatika"
+              onPress={() => {
+                navigation.navigate('BestLaboratoryProfile');
+              }}
             />
             <BestLaboratory
               profile={DummyMembers6}
               name="Jody Heryanto"
               major="Teknik Informatika"
+              onPress={() => {
+                navigation.navigate('BestLaboratoryProfile');
+              }}
             />
             <BestLaboratory
               profile={DummyMembers8}
               name="Devi Permata Sari"
               major="Sistem Informasi"
+              onPress={() => {
+                navigation.navigate('BestLaboratoryProfile');
+              }}
             />
             <Text style={styles.sectionLabel}>Good News</Text>
           </View>

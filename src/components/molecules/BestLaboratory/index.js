@@ -1,11 +1,11 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {IconStar} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const BestLaboratory = ({profile, name, major}) => {
+const BestLaboratory = ({profile, name, major, onPress}) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={profile} style={styles.avatar} />
       <View style={styles.profile}>
         <Text style={styles.name}>{name}</Text>
@@ -18,7 +18,7 @@ const BestLaboratory = ({profile, name, major}) => {
         <IconStar />
         <IconStar />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 16,
+    alignItems: 'center',
   },
   avatar: {
     width: 50,

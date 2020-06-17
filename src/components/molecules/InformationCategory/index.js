@@ -1,15 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import {
   ILHeadOfLaboratory,
-  ILLaboran,
   ILHeadOfLaboratoryAssistant,
-  ILHeadOfProgramming,
   ILHeadOfNetworking,
+  ILHeadOfProgramming,
+  ILLaboran,
 } from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-const InformationCategory = ({profession, name}) => {
+const InformationCategory = ({profession, name, onPress}) => {
   const Icon = () => {
     if (profession === 'Head of Laboratory') {
       return <ILHeadOfLaboratory style={styles.ilustration} />;
@@ -29,11 +30,11 @@ const InformationCategory = ({profession, name}) => {
     return <ILHeadOfLaboratory style={styles.ilustration} />;
   };
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Icon />
       <Text style={styles.label}>{profession}</Text>
       <Text style={styles.category}>{name}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

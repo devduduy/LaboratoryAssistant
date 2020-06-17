@@ -3,10 +3,14 @@ import {StyleSheet, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {colors, fonts} from '../../../utils';
 import IconOnly from './IconOnly';
+import BtnSendMessage from './BtnSendMessage';
 
-const Button = ({type, title, onPress, icon}) => {
+const Button = ({type, title, onPress, icon, disable}) => {
   if (type === 'icon-only') {
     return <IconOnly icon={icon} onPress={onPress} />;
+  }
+  if (type === 'btn-send-message') {
+    return <BtnSendMessage disable={disable} />;
   }
   return (
     <TouchableOpacity style={styles.container(type)} onPress={onPress}>

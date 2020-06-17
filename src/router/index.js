@@ -9,6 +9,11 @@ import {
   Home,
   Messages,
   Members,
+  ChooseInformation,
+  Chatting,
+  UserProfile,
+  EditProfile,
+  BestLaboratoryProfile,
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigator} from '../components';
@@ -57,6 +62,31 @@ const Router = () => {
       <Stack.Screen
         name="MainApp"
         component={MainApp}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ChooseInformation"
+        component={ChooseInformation}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Chatting"
+        component={Chatting}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="UserProfile"
+        component={UserProfile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="BestLaboratoryProfile"
+        component={BestLaboratoryProfile}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
