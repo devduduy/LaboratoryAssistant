@@ -11,6 +11,7 @@ import InputChat from './InputChat';
 import Profile from './Profile';
 import ListMenuUserProfile from './ListMenuUserProfile';
 import BestLaboratoryProfileItem from './BestLaboratoryProfileItem';
+import Loading from './Loading';
 
 export {
   Header,
@@ -26,4 +27,5 @@ export {
   Profile,
   ListMenuUserProfile,
   BestLaboratoryProfileItem,
+  Loading,
 };
