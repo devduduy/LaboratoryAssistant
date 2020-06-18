@@ -4,6 +4,7 @@ import {ILLogo} from '../../assets';
 import {Button, Gap, Header, Input, Loading} from '../../components';
 import {colors, fonts, useForm} from '../../utils';
 import {Fire} from '../../config';
+import {showMessage, hideMessage} from 'react-native-flash-message';
 
 const Register = ({navigation}) => {
   // const [fullName, setFullName] = useState('');
@@ -32,7 +33,13 @@ const Register = ({navigation}) => {
       .catch(error => {
         const errorMessage = error.message;
         setLoading(false);
-        console.log('error register: ', errorMessage);
+        showMessage({
+          message: errorMessage,
+          type: 'danger',
+          backgroundColor: colors.errorMessage,
+          color: colors.white,
+          duration: 2500,
+        });
       });
   };
   return (
